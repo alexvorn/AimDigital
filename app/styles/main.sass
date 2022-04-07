@@ -93,10 +93,12 @@ button[type='submit']
 
 .hero-content
     padding-top: gem(225)
+    margin-left: gem(100)
     h1
         padding-bottom: gem(20)
     p
         width: 50%
+        opacity: 0.8
 
 .btn
     color: var(--color-white)
@@ -144,6 +146,14 @@ button[type='submit']
     top: gem(23)
     right: 0
 
+.offer-one
+    width: gem(950)
+    margin: auto
+
+.offer-two
+    width: gem(590)
+    margin: auto
+
 .industries
     padding: gem(160) 0 0 0
 
@@ -152,3 +162,133 @@ button[type='submit']
         color: var(--color-deep-cove)
         padding-bottom: gem(247)
         font-weight: 600
+
+.industries-left, .industries-right
+    width: 100%
+    max-width: 50%
+
+.btn-lear-more
+    border: none
+    background: none
+    position: relative
+    display: none
+    
+.cards
+    padding-top: gem(33)
+
+.card
+    border: gem(1) solid var(--color-blizzard-blue)
+    margin-bottom: gem(20)
+    width: gem(589)
+    h3
+        color: var(--color-moonstone)
+        font-weight: 600
+        padding: gem(24) 0 gem(24) gem(40)
+    img
+        display: none
+    &:hover
+        border: none
+        position: relative
+        left: gem(-102)
+        h3
+            color: var(--color-deep-cove)
+            padding: gem(56) 0 gem(8) gem(40)
+        img
+            display: block
+            position: absolute
+            top: 0
+            right: 0
+        .btn-lear-more
+            color: var(--color-very-dark-blue)
+            display: block
+            padding: 0 gem(17) gem(56) gem(40)
+            .arrow
+                top: gem(8)
+
+.industries-right span
+    color: var(--color-deep-cove)
+    width: gem(589)
+    display: block
+
+.our-customers
+    padding-top: gem(160)
+    h2
+        color: var(--color-black-pearl)
+    a
+        color: var(--color-moonstone)
+        display: block
+.sliders
+    margin: gem(149) 0 gem(160)
+    display: flex
+.slide
+    width: gem(283)
+    position: relative
+    height: gem(390)
+    margin: auto
+    p
+        color: var(--color-deep-cove)
+        width: gem(224)
+        background: var(--color-white)
+        padding: gem(12) gem(19) gem(36) gem(12)
+        position: relative
+        top: gem(270)
+    img
+        position: absolute
+        z-index: -1
+
+.tabs
+    background: var(--color-downriver)
+    height: gem(720)
+    position: relative
+    left: gem(-100)
+    h2
+        width: 60%
+        margin: auto
+        padding: gem(160) 0 gem(80)
+
+.tab
+    display: flex
+    margin-left: gem(301)
+    margin-bottom: gem(50)
+    img
+        margin-left: gem(52)
+
+.bullet
+    width: gem(12)
+    height: gem(12)
+    background: var(--color-turquoise-pearl)
+    position: relative
+    top: gem(17)
+    border-radius: 50%
+
+.analytics
+    padding-top: gem(160)
+    h2
+        color: var(--color-deep-cove)
+        font-weight: 600
+        width: 35%
+        padding-left: gem(100)
+
+.analytics-cards
+    width: gem(690)
+    display: flex
+    flex-wrap: wrap
+.analytics-card
+    border: gem(1) solid var(--color-blizzard-blue)
+    &.d3
+        padding: gem(33) gem(77)
+    &.sap
+        padding: gem(35) gem(59)
+    &.exasol
+        padding: gem(43) gem(93) gem(42) gem(92)
+    &.r
+        padding: gem(33) gem(88) gem(33) gem(77)
+    &.informatica
+        padding: gem(32) gem(54) gem(31) gem(55)
+    &.python
+        gem(35) gem(76) gem(30) gem(78)
+    &.power-bi
+        gem(9) gem(40) gem(8) gem(44)
+    &.tableau
+        padding: gem(41) gem(44) gem(40) gem(45)
+
