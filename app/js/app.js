@@ -1,5 +1,6 @@
 // Import jQuery module (npm i jquery)
-import $ from 'jquery'
+import $ from 'jquery';
+import 'slick-carousel';
 window.jQuery = $
 window.$ = $
 
@@ -7,7 +8,14 @@ window.$ = $
 // require('~/app/libs/mmenu/dist/mmenu.js')
 
 document.addEventListener('DOMContentLoaded', () => {
+	const slider = document.querySelector('.sliders');
+	console.log(slider)
 	
-	// Custom JS
-
+	$('.sliders').slick({
+		// infinite: true,
+		dots: true,
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		// autoplay: true
+	  });
 })

@@ -64,7 +64,9 @@ button[type='submit']
 
 .flex
     display: flex
-
+.colum
+    display: flex
+    flex-direction: column
 .btn-contact
     color: var(--color-turquoise-pearl)
     padding: gem(12) gem(30) gem(13)
@@ -79,10 +81,37 @@ button[type='submit']
     z-index: 1
 .nav
     margin: auto
-    ul
-        display: flex
-        li
-            margin-right: gem(40)
+
+.nav-item
+    display: flex
+    position: relative
+    a
+        margin-right: gem(40)
+    &:hover
+        ul
+            display: block
+        svg path
+            transform: rotate(180deg)
+            transform-origin: 50% 50%
+
+.nav-item ul
+    position: absolute
+    margin-top: gem(26)
+    background: var(--color-cosmic-cobalt)
+    padding: gem(12) gem(22) gem(16) gem(16)
+    display: none
+    margin-left: gem(-50)
+    width: gem(200)
+    z-index: 1
+    li
+        margin-bottom: gem(12)
+        cursor: pointer
+        font-size: 0
+        &:last-child
+            margin-bottom: 0
+        a
+            &:hover
+                color: var(--color-turquoise-pearl)
 
 .hero
     background: linear-gradient(180deg, #06214C 0%, #04102D 100%)
@@ -220,6 +249,13 @@ button[type='submit']
 .sliders
     margin: gem(149) 0 gem(160)
     display: flex
+
+.slider-item
+    position: relative
+    width: gem(224)
+    height: gem(120)
+    top: gem(270)
+    background: var(--color-white)
 .slide
     width: gem(283)
     position: relative
@@ -227,14 +263,57 @@ button[type='submit']
     margin: auto
     p
         color: var(--color-deep-cove)
-        width: gem(224)
-        background: var(--color-white)
         padding: gem(12) gem(19) gem(36) gem(12)
         position: relative
-        top: gem(270)
     img
         position: absolute
         z-index: -1
+
+.slick-list.draggable
+    width: gem(996)
+    margin: auto
+
+.slick-list.draggable .slick-track
+    display: flex
+    justify-content: center
+
+.slick-slider .slick-list.draggable .slick-track .slick-slide
+    width: gem(386) !important
+    height: gem(481)
+    margin: 0 gem(22)
+
+.sliders .slick-dots
+    position: unset
+    font-size: 0
+    margin-top: gem(60)
+
+
+.slide
+    display: block !important
+    &:hover
+        width: gem(386) !important
+        height: gem(481)
+        // background: var(--color-white)
+        box-shadow: gem(4) gem(8) gem(32) rgba(82, 91, 148, 0.27158);
+        border-radius: gem(4)
+        p
+            padding-bottom: gem(16)
+        img
+            width: 100%
+            max-height: gem(481)
+        .slider-item
+            height: gem(129)
+            top: gem(355)
+            .btn-lear-more
+                display: block
+                color: var(--color-very-dark-blue)
+                cursor: pointer
+                margin-bottom: gem(16)
+                .arrow
+                    top: gem(6)
+                    right: gem(-11)
+
+
 
 .tabs
     background: var(--color-downriver)
@@ -266,15 +345,21 @@ button[type='submit']
     h2
         color: var(--color-deep-cove)
         font-weight: 600
-        width: 35%
-        padding-left: gem(100)
+        width: gem(479)
+        margin-left: gem(100)
 
 .analytics-cards
-    width: gem(690)
+    width: 65%
     display: flex
     flex-wrap: wrap
+    margin-top: gem(84)
+    padding-bottom: gem(160)
 .analytics-card
     border: gem(1) solid var(--color-blizzard-blue)
+    height: gem(125)
+    margin-bottom: gem(16)
+    img
+        display: block
     &.d3
         padding: gem(33) gem(77)
     &.sap
@@ -286,9 +371,98 @@ button[type='submit']
     &.informatica
         padding: gem(32) gem(54) gem(31) gem(55)
     &.python
-        gem(35) gem(76) gem(30) gem(78)
+        padding: gem(35) gem(76) gem(30) gem(78)
     &.power-bi
-        gem(9) gem(40) gem(8) gem(44)
+        padding: gem(9) gem(40) gem(8) gem(44)
     &.tableau
         padding: gem(41) gem(44) gem(40) gem(45)
+    &:nth-child(odd)
+        margin-right: gem(16)
+
+.analytics-card div
+    &:nth-child(1)
+        margin-left: gem(-66)
+    &:nth-child(2)
+        margin-left: gem(-224)
+    &:nth-child(3)
+        margin-left: gem(-102)
+
+.analytics-card
+    &:hover
+        border: none
+        background: #FFFFFF
+        box-shadow: gem(24) gem(32) gem(70) rgba(11, 20, 62, 0.117734)
+        border-radius: gem(2)
+
+.more-data
+    background: var(--color-black-pearl)
+    h2
+        padding: gem(160) 0 gem(20)
+    p
+        opacity: 0.8
+        width: 40%
+        margin: auto
+        padding-bottom: gem(40)
+
+.more-data
+    padding-bottom: gem(127)
+    img
+        display: block
+        margin: gem(-173) auto auto gem(301)
+
+.more-data .footer-btn
+    margin: auto
+    padding: gem(14) gem(19)
+    display: block
+    line-height: gem(21)
+
+.footer
+    background: var(--color-black-pearl)
+
+.footer-right
+    display: flex
+    flex-direction: row
+    justify-content: flex-end
+    width: 100%
+
+.footer-right-line
+    display: flex
+    align-items: flex-start
+    width: gem(200)
+    flex-direction: column
+    h3
+        line-height: gem(19)
+        margin-bottom: gem(32)
+    li
+        margin-bottom: gem(26)
+        font-size: 0
+        a
+            color: var(--color-white)
+            opacity: 0.8
+
+
+.footer-left .footer-btn
+    color: var(--color-turquoise-pearl)
+    border: gem(1) solid var(--color-turquoise-pearl)
+    background: none
+    line-height: gem(19)
+    padding: gem(12) gem(30) gem(13) gem(30)
+    display: block
+
+.logo-footer
+    display: block
+
+.social-link svg
+    width: gem(32)
+    height: auto
+
+.social-link svg path
+    fill: var(--color-turquoise-pearl)
+
+.social-link
+    margin: gem(40) 0
+    a
+        font-size: 0
+
+        
 
