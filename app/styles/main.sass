@@ -256,8 +256,9 @@ button[type='submit']
     height: gem(120)
     top: gem(270)
     background: var(--color-white)
-.slide
-    width: gem(283)
+    border: none
+.slick-slide .slide
+    width: gem(283) !important
     position: relative
     height: gem(390)
     margin: auto
@@ -268,6 +269,7 @@ button[type='submit']
     img
         position: absolute
         z-index: -1
+        height: gem(390)
 
 .slick-list.draggable
     width: gem(996)
@@ -281,12 +283,34 @@ button[type='submit']
     width: gem(386) !important
     height: gem(481)
     margin: 0 gem(22)
+    display: flex
+    align-items: end
 
-.sliders .slick-dots
-    position: unset
-    font-size: 0
-    margin-top: gem(60)
+.slick-slider .slick-dots
+    text-align: center
+    display: flex
+    justify-content: center
+    list-style: none
+    position: relative
+.slick-slider .slick-dots li button 
+    background: var(--color-turquoise-pearl)
+    border: none
+    border-radius: 50%
+    height: gem(8)
+    width: gem(8)
+    margin: gem(12)
+    outline: none
+    &::before
+        content: ''
 
+.slick-slider .slick-dots li
+    width: auto
+    height: auto
+
+.slick-slider .slick-dots li[class="slick-active"] button
+  background: var(--color-turquoise-pearl)
+  width: gem(14)
+  height: gem(14)
 
 .slide
     display: block !important
@@ -300,7 +324,7 @@ button[type='submit']
             padding-bottom: gem(16)
         img
             width: 100%
-            max-height: gem(481)
+            height: gem(481)
         .slider-item
             height: gem(129)
             top: gem(355)

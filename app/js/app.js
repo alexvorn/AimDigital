@@ -12,10 +12,13 @@ document.addEventListener('DOMContentLoaded', () => {
 	console.log(slider)
 	
 	$('.sliders').slick({
-		// infinite: true,
+		// lazyLoad: 'ondemand',
 		dots: true,
+		dotsClass: 'slick-dots',
 		slidesToShow: 3,
 		slidesToScroll: 1,
+		arrow: false,
+
 		// autoplay: true
 	  });
 })
